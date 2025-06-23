@@ -40,18 +40,18 @@ const Sidebar = () => {
           )}
         </div>
 
-        {/* Buses */}
+        {/* Customers */}
         <div>
           <button
             className="w-full text-left px-3 py-2 hover:bg-gray-100 rounded transition"
             onClick={() => toggleMenu("buses")}
           >
-            Buses
+            Customers
           </button>
           {openMenu === "buses" && (
             <div className="ml-4 mt-1 space-y-1">
-              <Link href="#" className="block px-3 py-1 hover:bg-gray-100 rounded">Schedule</Link>
-              <Link href="#" className="block px-3 py-1 hover:bg-gray-100 rounded">Add Bus</Link>
+              <Link href="#" className="block px-3 py-1 hover:bg-gray-100 rounded">All Customers</Link>
+              <Link href="#" className="block px-3 py-1 hover:bg-gray-100 rounded">Add Customer</Link>
             </div>
           )}
         </div>
