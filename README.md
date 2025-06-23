@@ -72,7 +72,7 @@ The project follows a **modular and maintainable structure**:
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/kasper-adaptation-project.git
+git clone https://github.com/kironiitdu/kasper-adaptation-project.git
 cd kasper-adaptation-project
 
 ````
