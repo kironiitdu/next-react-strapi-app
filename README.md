@@ -45,3 +45,34 @@ This migration aims to:
 ## 🧱 Project Architecture
 
 The project follows a **modular and maintainable structure**:
+
+## 🧱 Project Structure
+
+````text
+/src
+├── /app         → App router entry points & routes
+├── /components  → Reusable UI components (e.g., Navbar, LoginForm, Table)
+├── /context     → React Context for global state (e.g., AuthContext)
+├── /lib         → Axios instance & API helpers
+├── /utils       → Utility functions (e.g., tokenUtils, userUtils)
+├── /styles      → Global styles (Tailwind & custom CSS)
+├── /pages       → (If used) Legacy routing fallback
+└── /public      → Static assets
+
+
+- **Authentication** is managed using JWT tokens stored in localStorage.
+- **API Communication** is centralized via a custom Axios instance that attaches the token to every request.
+- **State Management** is done using Context API and custom hooks.
+- **Dynamic and Static Rendering** is handled using `getServerSideProps` and `getStaticProps` respectively.
+
+---
+
+## 🧪 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/kasper-adaptation-project.git
+cd kasper-adaptation-project
+
+````
