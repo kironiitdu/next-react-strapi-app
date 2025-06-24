@@ -6,22 +6,25 @@
  *
  *
  */
-import axios from "axios";
-import { getToken } from "../utils/tokenUtils";
 
-console.log("Using API base URL:", process.env.NEXT_PUBLIC_API_BASE_URL);
+import axios from "axios";
+import { getToken } from "@/app/utils/tokenUtils";
+
 const api = axios.create({
-  // baseURL: 'http://localhost:1337/api',
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
 });
 
-api.interceptors.request.use((config) => {
-  console.log("Using API base URL:", process.env.NEXT_PUBLIC_API_BASE_URL);
-  const token = getToken();
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
+api.interceptors.request.use(
+  (config) => {
+    const token = getToken();
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
   }
-  return config;
-});
+);
 
 export default api;

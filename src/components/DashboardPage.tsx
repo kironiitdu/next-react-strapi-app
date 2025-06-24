@@ -50,7 +50,7 @@ const Sidebar = () => {
           </button>
           {openMenu === "buses" && (
             <div className="ml-4 mt-1 space-y-1">
-              <Link href="#" className="block px-3 py-1 hover:bg-gray-100 rounded">All Customers</Link>
+              <Link href="/customer" className="block px-3 py-1 hover:bg-gray-100 rounded">All Customers</Link>
               <Link href="#" className="block px-3 py-1 hover:bg-gray-100 rounded">Add Customer</Link>
             </div>
           )}
