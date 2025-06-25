@@ -34,7 +34,7 @@ const Sidebar = () => {
           </button>
           {openMenu === "routes" && (
             <div className="ml-4 mt-1 space-y-1">
-              <Link href="#" className="block px-3 py-1 hover:bg-gray-100 rounded">All Routes</Link>
+              <Link href="/route" className="block px-3 py-1 hover:bg-gray-100 rounded">All Routes</Link>
               <Link href="#" className="block px-3 py-1 hover:bg-gray-100 rounded">Add Route</Link>
             </div>
           )}
