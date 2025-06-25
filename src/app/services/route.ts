@@ -12,9 +12,7 @@ export async function getRoutes(): Promise<Route[]> {
   const allRoutes: Route[] = data.data;
 
   // Filtering routes that have a numeric price (not null or 'N/A')
-  const pricedRoutes = allRoutes.filter(
-    (route) => route.price !== null && route.price !== "N/A"
-  );
+  const pricedRoutes = allRoutes.filter((route) => route.price !== null);
 
   return pricedRoutes;
 }
